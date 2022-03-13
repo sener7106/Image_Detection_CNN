@@ -38,7 +38,7 @@ def detect_image_face(file_path, image, cascade_filepath) :
     faces = cascade.detectMultiScale(image_gs, scaleFactor=1.1, minNeighbors=15, minSize=(64, 64))
     if len(faces) == 0 :
         print("얼굴 인식 실패")
-        return
+        return 
     # 1개 이상의 얼굴을 인식한 경우
     face_count = 1
     for (xpos, ypos, width, height) in faces:
